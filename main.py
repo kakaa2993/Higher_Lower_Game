@@ -28,9 +28,9 @@ def game_generator():
     while not game_over:
         opponent_b = generate_opponents()
         if opponent_b != opponent_a:
-            print(f"Compare A: {opponent_a[0]}, {opponent_a[2]}, {opponent_a[3]}.")
+            print(f"Compare A: {opponent_a[0]}, a {opponent_a[2]}, from {opponent_a[3]}.")
             print(vs_logo)
-            print(f"Compare B: {opponent_b[0]}, {opponent_b[2]}, {opponent_b[3]}.")
+            print(f"Against B: {opponent_b[0]}, a {opponent_b[2]}, from {opponent_b[3]}.")
             answer = input("Who has more followers? type 'A' or 'B': ").lower()
             if opponent_a[1] > opponent_b[1]:
                 correct_answer = "a"
