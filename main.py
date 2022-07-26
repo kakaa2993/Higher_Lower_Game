@@ -21,6 +21,7 @@ def clear_the_screen():
 clear_the_screen()
 
 def game_generator():
+    ''' generate a game compare between the correct answer and the player answer'''
     opponent_a = generate_opponents()
     game_over = False
     correct_answer = "b"
@@ -32,19 +33,18 @@ def game_generator():
             print(vs_logo)
             print(f"Against B: {opponent_b[0]}, a {opponent_b[2]}, from {opponent_b[3]}.")
             answer = input("Who has more followers? type 'A' or 'B': ").lower()
+            clear_the_screen()
             if opponent_a[1] > opponent_b[1]:
                 correct_answer = "a"
             if answer == correct_answer:
                 score += 1
-                clear_the_screen()
                 print(f"You're right! current score: {score}")
                 opponent_a = opponent_b
             else:
                 game_over = True
-                clear_the_screen()
                 print(f"Sorry, that's wrong. Final score: {score}")
 
-# compare between the correct answer and the player answer
+
 
 game_generator()
 
