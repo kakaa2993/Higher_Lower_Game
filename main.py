@@ -5,7 +5,8 @@ import random
 import os
 from art import logo,vs_logo
 from game_data import data
-# #Display the logo 
+
+# Display the logo 
 def generate_opponents():
     opponent = random.choice(data)
     name = opponent["name"]
